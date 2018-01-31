@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MonyetlaDash.master.cs" Inherits="Monyetla5Web.Master_Pages.MonyetlaDash" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Monyetla5</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+        
+       <div id="wrapper">
+                    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" style="margin-top: 8px; margin-bottom:3px; margin: auto; color: navy; font-weight: bold">Monyetla Work Readiness Programme Phase 5</a>
+                        </div>
+
+                        
+
+                    <ul class="nav navbar-top-links navbar-right">  
+                        <p style="float:left; margin-top: 3%">Hello, you are logged in under the Consortium, <strong><%:Session["Consortium_Name"] %></strong>, RegNo: <strong><%:Session["Consortium_Reg"] %></strong></p>
+                 <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="/Index.aspx"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+                 </ul>
+ 
+                        <div class="navbar-default sidebar" role="navigation">
+                            <div class="sidebar-nav navbar-collapse">
+                                <ul class="nav" id="side-menu">
+                                    <li class="sidebar-search">
+                                        <div class="input-group custom-search-form">
+                                            <input type="text" class="form-control" placeholder="Search..." disabled>
+                                            <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button" disabled>
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </span>
+                                        </div>
+                                        <!-- /input-group -->
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Courses<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-second-level">
+                                             <li>
+                                                <a href="AddCourse.aspx">Add Course</a>
+                                            </li>
+                                            <li>
+                                                <a href="ViewCourse.aspx">View Course</a>
+                                            </li>
+                                            <li>
+                                                <a href="AddCourseSchedule.aspx">Add Course Schedule</a>
+                                            </li>
+                                            <li>
+                                                <a href="Consortium.aspx">View scheduled Course</a>
+                                            </li>
+                                                                                       
+                                        </ul>
+                                        <!-- /.nav-second-level -->
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Learners<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-second-level">
+                                            <li>
+                                                <a href="AddLearner.aspx">Add Learner</a>
+                                            </li>
+                                             <li>
+                                                <a href="#">View Learner <span class="fa arrow"></span></a>
+                                                 <ul class="nav nav-third-level">
+                                                    <li>
+                                                        <a href="ViewLearner.aspx">All Learners</a>
+                                                    </li>
+                                                     <li>
+                                                        <a href="LearnerDetails.aspx">View Learner Details</a>
+                                                    </li>
+                                                 </ul>
+                                            </li>
+                                            <li>
+                                                <a href="EnrollLearner.aspx">Enroll Learner to course</a>
+                                            </li>
+                                            <li>
+                                                <a href="ViewEnrolledLearner.aspx">View enrolled learners</a>
+                                            </li>
+                                        </ul>
+                                        <!-- /.nav-second-level -->
+                                    </li>
+                                  <li>
+                                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Documents<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-second-level">
+                                             <li>
+                                                <a href="ViewUploadedD.aspx">View Uploaded Doc</a>
+                                            </li>
+                                            
+                                                                                       
+                                        </ul>
+                                        <!-- /.nav-second-level -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.sidebar-collapse -->
+                        </div>
+                        <!-- /.navbar-static-side -->
+                     </nav>
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+              
+                </div>
+       
+ 
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+</body>
+</html>
